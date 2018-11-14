@@ -16,7 +16,7 @@ class String
 
   def count_sentences
     array = self.split(/\.|\?|\!/)
-    array.each map |s, index|
+    array.map do |s, index|
        array.slice!(index) if s.empty?
     end
     array.count
