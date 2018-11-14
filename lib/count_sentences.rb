@@ -15,11 +15,11 @@ class String
   end
 
   def count_sentences
-    self.split(/\.|\?|\!/)
-    self.each map |s, index|
-       self.slice!(index) if s.empty?
+    array = self.split(/\.|\?|\!/)
+    array.each map |s, index|
+       array.slice!(index) if s.empty?
     end
-    self.count
+    array.count
   end
   
 end
